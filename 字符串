@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>
+int main()
+{
+	char arr1[] = "abc";
+	char arr2[] = { 'a','b','c','\0'};//'c'后面加上\0或者0，表示字符串结束，才会输出abc，否则abc后继续输出随机数
+	printf("%s\n", arr1);
+	printf("%s\n", arr2);
+	printf("%d\n", strlen(arr1));//strlen----steing length---计算字符串长度 C语言自带的函数
+	printf("%d\n", strlen(arr2));
+	return 0;
+}
