@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	printf("(Are you OK\?\?)\n");//使用\?是用于连续书写？时，防止被解析为三字母词。三字母词中??)对应]
+	printf("%c\n", '\'');//%c打印字符使用\'用于打印'
+	printf("%s\n", "\"");//%s打印字符串使用\"用于打印"
+	printf("abc\tabc\n");//使用\t为水平制表符，一个制表符代表8列，出现\t直接跳转至第9列
+	printf("%d\n", strlen("c:\test\32\test.c"));//strlen用于输出字符串长度为13，\t为转义字符算1个字符，
+	//\32也是转义字符算1个字符，32是2个八进制数字，八进制数32是代表的是对应的十进制数26作为ASCII码值代表的字符向右箭头——>
+	printf("%c\n", '\32');
+	printf("%c\n", '\132');//同理八进制数132对应十进制数90，90在ASCII中代表Z
+	printf("%c\n", '\x61');//十六进制数61对应十进制数97，97在ASCII表中代表a
+	return 0;
+}
