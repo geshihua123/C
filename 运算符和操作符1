@@ -1,0 +1,51 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>
+
+int main()
+{
+	int a = 5 / 2;//商2余1
+	printf("%d\n",a);//a为商
+	int b = 5%2;//取模，就是余数
+	printf("%d\n",b);//a为余数
+
+	int c = 5;
+	int d = c << 2;//将5转化为二进制数101，将二进制数101左移2位变为二进制数10100，对应十进制数为20
+	printf("%d\n", d);
+	printf("%d\n", c);
+
+	int e = 3;//十进制3转换为二进制011
+	int f = 5;//十进制5转换为二进制101
+	int g = e & f;//按位与，有0则为0，同是1才为1
+	printf("%d\n", g);
+
+	int h = 3;//十进制3转换为二进制011
+	int i = 5;//十进制5转换为二进制101
+	int j = h|i;//按位或，有1则为1，同是0才为0
+	printf("%d\n", j);
+
+	int k = 3;//十进制3转换为二进制011
+	int l = 5;//十进制5转换为二进制101
+	int m = k ^ l;//按位异或，对应的二进制位相同为0，相异为1
+	printf("%d\n", m);
+
+	int n = 10;
+	printf("%d\n", n);
+	printf("%d\n", !n);//！为逻辑反操作，C语言规定0为假，非0为真，n=10为真，!n为假=0
+
+	int o = 0;
+	printf("%d\n", o);
+	printf("%d\n", !o);//o=0为假，!o为真=1
+
+	int p = 10;
+	printf("%d\n", sizeof(p));//sizeof计算的是变量或类型所占空间的大小，单位是字节,10为整型，整形占4字节
+	printf("%d\n", sizeof(int));
+	
+	int arr[10] = { 0 };//10个整型元素的数组
+	printf("%d\n", sizeof(arr));//10*4
+	int sz = 0;
+	sz = sizeof(arr) / sizeof(arr[0]);//计算数组元素的个数=数组总大小/数组每个元素的大小,sz=40/4=10
+	printf("%d\n", sz);
+
+	return 0;
+}
