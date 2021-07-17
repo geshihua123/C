@@ -43,18 +43,28 @@ int main()
 	int q = 5;//5为真
 	int r = 0;//0为假
 	int s = 0;
+	
 	int t = o && q;//真&&真为真
 	printf("t=%d\n", t);//输出1
+	
 	int u = o && r;//真&&假为假
 	printf("u=%d\n", u);//输出0
+	
 	int v = r && s;//假&&假为假
 	printf("v=%d\n", v);//输出0
+	
 	int w = o || q;//真||真为真
 	printf("w=%d\n", w);//输出1
+	
 	int x = o || r;//真||假为假
 	printf("x=%d\n", x);//输出1
+	
 	int y = r || s;//假||假为假
 	printf("y=%d\n", y);//输出0
+	
+	int max = 0;
+	max = (o > q ? o : q);//条件操作符，如果o>q为真输出o，a>b为假输出q
+	printf("%d\n", max);
 
 	return 0;
 }
