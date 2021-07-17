@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>
+
+void test()
+{
+	static int a = 1;//static将局部变量修饰为静态的局部变量，使局部变量生命周期变长
+	//如果static修饰全局变量，使静态的全局变量的作用域改变为它所在的源文件内部，不能被extern引用
+	//如果static修饰函数，改变了函数的链接属性
+	//普通的函数是具有外部链接属性，被static修饰后变为内部链接属性，不能被extern引用
+
+	a++;
+	printf("a=%d\n", a);
+}
+
+int main()
+{
+	int i = 0;
+	while (i < 5)
+	{
+		test();
+		i++;
+	}
+
+	return 0;
+}
