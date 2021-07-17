@@ -10,5 +10,12 @@ int main()
 	printf("%p\n", p);//输出的p与&a相同，都是a存放的地址
 	*p = 20;//*为解引用操作符，将20赋值给p代表的地址所存放的内容，就是将20赋值给a
 	printf("a=%d\n", a);//输出a=20
+
+	char ch = 'w';
+	char* pc = &ch;
+	*pc = 'y';
+	printf("%c\n", ch);
+	printf("%d\n", sizeof(pc));//输出大小为4，说明此平台为32位，如果将平台改为64位，输出大小位8
+	//更改平台方法：Debug——》配置管理器——》平台win32下拉新建——》x64
 	return 0;
 }
