@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main()
+{
+    float f, x = 3.6, y = 5.2;
+    int i = 4, a, b;
+    a = x + y;//x+y=8.8,a为int，a=8
+    b = (int)y; //强制类型转换：（数据类型）变量，y5.2为float强制转换为int为5
+    f = 10 / i;//整型除整型得整型，10/4=2，但2以float的类型存储
+    printf("a=%d,b=%d,f=%f,x=%f\n", a, b, f, x);//x是float直接输出
+    return 0;
+}
